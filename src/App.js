@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Menu from './Component/navBar'
+import ItemListCointainer from './Component/itemListContainer';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const titulo = ["Bienvenido a Mi Nueva Tienda"]
+
+    return ( <
+        div className = "" >
+        <
+        div className = "Navbar_menu" >
+        <
+        Menu / >
+        <
+        /div>
+
+        <
+        header className = "App-header" >
+        <
+        ItemListCointainer greeting = { titulo }
+        />  <
+        /header> 
+
+        <
+        /div>
+    );
 }
 
 export default App;
