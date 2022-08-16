@@ -26,7 +26,7 @@ function App() {
          <body>
          {
             productos.map ((item,index) => (
-                <ItemCount key={index} nameProducto= {item.nameProducto} initial = {0} stock= {item.stock} /> 
+                <ItemCount key={index} nameProducto= {item.nameProducto} initial = {1} stock= {item.stock} /> 
             ))
         }
          </body>

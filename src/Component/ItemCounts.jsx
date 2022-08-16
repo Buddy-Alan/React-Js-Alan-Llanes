@@ -47,13 +47,14 @@ const ItemCount = ({stock, initial,nameProducto,onAdd}) =>
                     <div style= {botones}>
                     <div style = {styleBotonSumaYResta} >
                     <button className="resta btn btn-outline-secondary btn-sm" style={{height:30}} onClick={  () => contador > 0  ? setContador ( contador - 1): ""}>-</button>
-                        <h3 style = {styleContador}> {onAdd= contador}</h3>
+                        <h3 style = {styleContador}> {contador}</h3>
                         <button className="suma btn btn-outline-secondary btn-sm" style={{height:30} } onClick={() => contador < stockInicial  ? setContador( contador + 1):""}>+</button>               
                     </div>
                     <div style={botonAgregar}>
                     <button type="button" className="btn btn-secondary btn-sm" onClick={ onAdd = () => {
-                        console.log(`Usted Agrego al carrito:  ${contador} ${titulo}`
-                        )
+                            if ( stock >= contador ){
+                        console.log(`Usted Agrego al carrito:  ${contador} ${titulo}`)
+                            }
                     }}>Agregar al Carrito</button>
                     </div>
                     </div>
