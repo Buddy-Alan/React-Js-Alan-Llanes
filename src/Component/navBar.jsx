@@ -2,14 +2,9 @@ import React from "react";
 import logo from '../logo.svg';
 import CartWidget from "./CartWidget"; //importo el changuito
 
-  const style = {
-    display: `flex`,
-    justifyContent: `flex-end`,
-    paddingRight: 30,
-    fontSize: 25
-  }
 
-const menuNavegacion = () =>
+
+const navBar = () =>
 
 {
 
@@ -44,8 +39,8 @@ const menuNavegacion = () =>
     <img src={logo} alt="Logo" width="60" height="60" className="d-inline-block align-text-top"/>
     
     </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
 
     <div className="collapse navbar-collapse " id="navbarNav">
@@ -71,4 +66,4 @@ const menuNavegacion = () =>
     )
 };
 
-export default menuNavegacion;
+export default navBar;
