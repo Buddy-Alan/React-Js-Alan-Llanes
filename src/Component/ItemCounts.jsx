@@ -52,10 +52,19 @@ const ItemCount = ({stock, initial,nameProducto,onAdd}) =>
                     </div>
                     <div style={botonAgregar}>
                     <button type="button" className="btn btn-secondary btn-sm" onClick={ onAdd = () => {
-                            if ( stock >= contador ){
-                        console.log(`Usted Agrego al carrito:  ${contador} ${titulo}`)
-                            }
-                    }}>Agregar al Carrito</button>
+                        
+                        if ( stockInicial >= contador ){
+                            console.log(`Usted Agrego al carrito:  ${contador} ${titulo}`)
+                            setStockInicial ( stockInicial - contador)
+                                }
+                                else {
+                                    (console.log ("No hay suficientes productos para la compra"))
+                                }
+                            
+                        }
+
+                    }>Agregar al Carrito</button>
+                    
                     </div>
                     </div>
                 </div>
