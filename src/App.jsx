@@ -1,11 +1,10 @@
 import './App.css';
-import NavBar from './Component/navBar'
-import ItemListCointainer from './Component/itemListContainer';
-import ItemCount from './Component/ItemCounts';
+import NavBar from './Component/navBar/navBar'
+import ItemListCointainer from './Component/itemListContainer/itemListContainer';
+import ItemCount from './Component/ItemCounts/ItemCounts';
 
 
 function App() {
-    const titulo = ["Bienvenido a Mi Nueva Tienda"]
     const productos = [
         {
             initial: 0,
@@ -15,23 +14,27 @@ function App() {
 
     ]
     return ( 
-        <div className = "" >
+      <>
             
         <div className = "Navbar_menu" >
-        <NavBar / >
+        <NavBar/>
         </div> 
         < header className =  "" >
-        <ItemListCointainer greeting = {titulo}/>     
-         </header>
-         <body>
-         {
+   
+         </header>   
+ 
+            <div className='row'>
+            <ItemListCointainer />    
+            </div>
+         {/* {
             productos.map ((item,index) => (
                 <ItemCount key={index} nameProducto= {item.nameProducto} initial = {1} stock= {item.stock} /> 
             ))
-        }
-         </body>
+        } */}
+   
+   
 
-        </div>
+</>
     );
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Changuito from '../Imagenes/Changuito.png'
+import CartWidget from '../Imagenes/CartWidget.png'
 
 const style = {
     display: `flex`,
@@ -13,7 +13,7 @@ return (
     //  d-flex flex-row-reverse Pone todo al costado derecho
     //  Ver si se puede usar justifi content 
     <div className="navbar-collapse" style = {style} >
-    <img src={Changuito}  className="d-inline-block " style={{paddingRight: 10}} alt="changuito"/>
+    <img src={CartWidget}  className="d-inline-block " style={{paddingRight: 10}} alt="changuito"/>
     <p id ="cantidaDeProductos">0</p> 
     </div>
     );

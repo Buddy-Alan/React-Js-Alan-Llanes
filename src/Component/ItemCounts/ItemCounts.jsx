@@ -1,4 +1,4 @@
-import React, {createElement, useState} from "react";
+import React, {useState} from "react";
 
 
 const styleBotonSumaYResta = {
@@ -31,12 +31,6 @@ const ItemCount = ({stock, initial,nameProducto,onAdd}) =>
             const [contador, setContador] = useState(initial);
             const [titulo, setTitulo] = useState(nameProducto);
             const [stockInicial, setStockInicial] = useState(stock);
-            // onAdd = ()  =>
-            //     {
-            //     let div = React.createElement("div");
-            //     div.innerHTML = `
-            //     holaaaa`
-            //     };
             return(
                 
                 <div className="card" style= {{width: 150, height: 130}}>

@@ -1,6 +1,6 @@
 import React from "react";
-import logo from '../logo.svg';
-import CartWidget from "./CartWidget"; //importo el changuito
+import Logo from '../../logo.svg';
+import CartWidget from "../CartWidget/CartWidget"; //importo el changuito
 
 
 
@@ -36,7 +36,7 @@ const navBar = () =>
         <nav className="navbar bg-light  navbar-expand-lg">
 
     <a className="navbar-brand" href="#">
-    <img src={logo} alt="Logo" width="60" height="60" className="d-inline-block align-text-top"/>
+    <img src={Logo} alt="Logo" width="60" height="60" className="d-inline-block align-text-top"/>
     
     </a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -48,8 +48,8 @@ const navBar = () =>
 
       {
         //Hago un map de mi array para que me devuelva todo los items.
-          navBarItems.map((datoNavbar) => (
-          <li className="nav-item">
+          navBarItems.map(( datoNavbar, inedexNavBar) => (
+          <li className="nav-item"  key = {inedexNavBar}>
           <a className="nav-link active" aria-current="page" href={datoNavbar.href}> {datoNavbar.item}</a>
           </li>
       ))
