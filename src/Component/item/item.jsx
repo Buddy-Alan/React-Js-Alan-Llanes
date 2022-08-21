@@ -12,7 +12,7 @@
       <div className="card-body" id ={id}>
       <h5 className="card-title {title}"   >{title}</h5>
       <p className="card-text {price}" > $ {price} </p>
-      <a href="#" className="btn btn-primary">Go somewhere</a>
+      <a href="#" className="btn btn-primary">Mas Info del Porducto</a>
       </div>
       </div>
       </div>

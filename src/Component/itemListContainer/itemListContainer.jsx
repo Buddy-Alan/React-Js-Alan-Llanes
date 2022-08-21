@@ -25,7 +25,7 @@ const ItemListContainer = () => {
         },
         {
             id: 3,
-            title: "Amemoria ddr4 3200Mhzs 8gb kingstong",
+            title: "Memoria DDR4 3200Mhzs 8gb kingstong",
             price: 153,
             pictureURL: RamDDR4_8GB
         }
