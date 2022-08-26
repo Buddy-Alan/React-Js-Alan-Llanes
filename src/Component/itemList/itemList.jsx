@@ -1,5 +1,6 @@
 import React from 'react';
 import Item from '../item/item';
+const imagenesProductos = require.context('../Imagenes/', true);
 
 const itemList = ({items}) => {
 

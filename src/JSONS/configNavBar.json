@@ -1,0 +1,23 @@
+{
+    "route": [{
+            "item": "Home",
+            "to": "/"
+        },
+        {
+            "item": "Componentes de PC",
+            "to": "/componentes-de-pc"
+        },
+        {
+            "item": "Almacenamiento",
+            "to": "/almacenamiento"
+        },
+        {
+            "item": "Combos",
+            "to": "/combos"
+        },
+        {
+            "item": "Contactanos",
+            "to": "/contactanos"
+        }
+    ]
+}

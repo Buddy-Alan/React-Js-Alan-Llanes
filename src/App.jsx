@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './Component/navBar/navBar'
 import ItemListCointainer from './Component/itemListContainer/itemListContainer';
-import ItemCount from './Component/ItemCounts/ItemCounts';
+import Rutas from './routes/rutas';
 
 
 function App() {
@@ -15,17 +15,16 @@ function App() {
     ]
     return ( 
       <>
-            
+
         <div className = "Navbar_menu" >
-        <NavBar/>
+        <Rutas/>
         </div> 
         < header className =  "" >
    
          </header>   
- 
-            <div className='row'>
-            <ItemListCointainer />    
-            </div>
+            {/* <div className='row'>
+            <ItemListCointainer/>
+            </div> */}
          {/* {
             productos.map ((item,index) => (
                 <ItemCount key={index} nameProducto= {item.nameProducto} initial = {1} stock= {item.stock} /> 

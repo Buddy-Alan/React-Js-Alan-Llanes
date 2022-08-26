@@ -1,0 +1,75 @@
+    {
+        "TodosLosProducts": [
+
+            {
+                "id": 1,
+                "title": " Procesador Ryzen 5 5600 g ",
+                "price": 37.547,
+                "pictureURL": "./ProcesadorRyzen5.jpg",
+                "stock": 3,
+                "description": [
+
+                    "Número de núcleos: 6",
+                    "Número de hilos de proceso: 12",
+                    "Reloj base: 3.9GHz",
+                    "Frecuencia Turbo: Hasta 4.4GHz",
+                    "Total Cache L2: 3MB",
+                    "Total Cache L3: 16MB",
+                    "Frecuencia desbloqueada: Si",
+                    "CMOS: FinFET TSMC 7nm",
+                    "Socket: AM4",
+                    "Versión PCI Express: PCI Express 3.0 x24",
+                    "Solución térmica: ninguna",
+                    "TDP por defecto: 65W",
+                    "Temperatura máxima: 95 grados ",
+                    "Tipo de memoria: DDR4",
+                    "Canales de memoria: 2 canales",
+                    "Velocidad máxima de memoria: DDR4 3200MHz",
+                    "Arquitectura: Zen3"
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Procesador Ryzen 7 5700g",
+                "price": 61.371,
+                "pictureURL": "./ProcesadorRyzen7.jpg",
+                "stock": 5,
+                "description": [
+                    "Número de núcleos: 6",
+                    "Reloj base: 3.9GHz",
+                    "Frecuencia Turbo: Hasta 4.4GHz",
+                    "Total Cache L3: 16MB",
+                    "Total Cache L2: 3MB",
+                    "Frecuencia desbloqueada: Si",
+                    "CMOS: FinFET TSMC 7nm",
+                    "Socket: AM4",
+                    "Versión PCI Express: PCI Express 3.0 x24",
+                    "Solución térmica: ninguna",
+                    "TDP por defecto: 65W",
+                    "Temperatura máxima: 95 grados",
+                    "Tipo de memoria: DDR4",
+                    "Canales de memoria: 2 canales",
+                    "Velocidad máxima de memoria: DDR4 3200MHz",
+                    "Arquitectura: Zen3"
+                ]
+
+            },
+            {
+                "id": 3,
+                "title": "Memoria DDR4 3200 Mhzs 8 gb kingstong",
+                "price": 11.167,
+                "pictureURL": "./RamDDR4_8GB.jpg",
+                "stock": 20,
+                "description": [
+                    "Tipo de memoria: DDR4",
+                    "Capacidad total: 8GB",
+                    "Velocidad de acceso: 3000MHz",
+                    "Voltios: 1.2",
+                    "Kit: Individual",
+                    "Color: Negro"
+                ]
+            }
+
+        ]
+
+    }

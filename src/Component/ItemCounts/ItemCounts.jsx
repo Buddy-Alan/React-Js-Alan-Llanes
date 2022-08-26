@@ -33,7 +33,7 @@ const ItemCount = ({stock, initial,nameProducto,onAdd}) =>
             const [stockInicial, setStockInicial] = useState(stock);
             return(
                 
-                <div className="card" style= {{width: 150, height: 130}}>
+                <div style= {{width: 150, height: 130}}>
                     
                     <div className="carrito">
                     </div>
