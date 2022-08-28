@@ -4,9 +4,9 @@
  
  const item = ({item}) => {
    
-    const {id,title,price,pictureURL} = item;
+    const {id,title,price,pictureURL,category} = item;
    return (
-      <div className='col'>
+      <div className={`col ${category}`} >
       <div className= {`card ${title}`} style={{width: "18rem"}} >
       <img className="card-img-top" src= {imagenesProductos(`${pictureURL}`)}  alt={title}/>
       <div className="card-body" >

@@ -14,10 +14,9 @@ const imgYContador = {
 }
 
 const ItemDetails = ({detallesProducto}) => {
-    const {id,title,price,pictureURL,description,stock} = detallesProducto;
-    
+    const {id,title,price,pictureURL,description,stock,category} = detallesProducto;
     return (
-      <div className='row'>
+      <div className={`row  ${category}`}>
       <div className='col'style={itemDetailsClass}>
       <div className= {`card ${title}`} id= {id}  style={{width: "48rem" } } >
       <div style={imgYContador}>

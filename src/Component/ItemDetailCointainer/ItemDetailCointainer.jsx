@@ -4,6 +4,7 @@ import getItems from '../../getItems'
 import product from '../../JSONS/product.json'
 import ItemDetails from "../ItemDetails/ItemDetails";
 
+
 const ItemDetailCointainer = () => 
 
 {
@@ -17,6 +18,7 @@ const ItemDetailCointainer = () =>
             productosNuevo.filter((item) => item.id == params.id).map((item,index) => (
 
                 <ItemDetails key = {index} detallesProducto={item}/>
+        
             ))
     );
 

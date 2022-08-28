@@ -3,6 +3,7 @@
 
             {
                 "id": 1,
+                "category": 1,
                 "title": " Procesador Ryzen 5 5600 g ",
                 "price": 37.547,
                 "pictureURL": "./ProcesadorRyzen5.jpg",
@@ -30,6 +31,7 @@
             },
             {
                 "id": 2,
+                "category": 1,
                 "title": "Procesador Ryzen 7 5700g",
                 "price": 61.371,
                 "pictureURL": "./ProcesadorRyzen7.jpg",
@@ -56,6 +58,7 @@
             },
             {
                 "id": 3,
+                "category": 1,
                 "title": "Memoria DDR4 3200 Mhzs 8 gb kingstong",
                 "price": 11.167,
                 "pictureURL": "./RamDDR4_8GB.jpg",
@@ -67,6 +70,46 @@
                     "Voltios: 1.2",
                     "Kit: Individual",
                     "Color: Negro"
+                ]
+            },
+            {
+                "id": 4,
+                "category": 2,
+                "title": "Disco SSD 240GB ",
+                "price": 4.795,
+                "pictureURL": "./DiscoSSD240GB.jpg",
+                "stock": 10,
+                "description": [
+                    "Marca: Kingston",
+                    "Modelo: A400",
+                    "Dimensiones: 100,0 Mm X 69,9 Mm X 7,0 Mm",
+                    "Factor De Forma: 2.5 ",
+                    "Tipo Memoria: SSD ",
+                    "Capacidad: 240GB",
+                    "Interfaz: SATA3 / SATA 2 ",
+                    "Tecnologia: 3D TLC NAND flash",
+                    "Velocidad Lectura: 500 MB/s",
+                    "Velocidad Escritura: 450 MB/s"
+                ]
+            },
+            {
+                "id": 5,
+                "category": 2,
+                "title": "Disco SSD 480GB ",
+                "price": 8.155,
+                "pictureURL": "./DiscoSSD480GB.jpg",
+                "stock": 10,
+                "description": [
+                    "Marca: Kingston",
+                    "Modelo: A400",
+                    "Dimensiones: 100,0 Mm X 69,9 Mm X 7,0 Mm",
+                    "Factor De Forma: 2.5 ",
+                    "Tipo Memoria: SSD ",
+                    "Capacidad: 480GB",
+                    "Interfaz: SATA3 / SATA 2 / SATA 1",
+                    "Tecnologia: 3D TLC NAND flash",
+                    "Velocidad Lectura: 545 MB/s",
+                    "Velocidad Escritura: 545 MB/s"
                 ]
             }
 
