@@ -1,4 +1,6 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
+import { GlobalContext } from "../../context/GlobalProvider";
+
 
 
 const styleBotonSumaYResta = {
@@ -26,18 +28,18 @@ const styleBotonSumaYResta = {
      }
 
 
-const ItemCount = ({stock, initial,nameProducto,onAdd}) =>
+const ItemCount = ({stockDelProducto, initial,productoCompleto,onAdd}) =>
         { 
+            const {title} = productoCompleto
+            const {productCart,setProductCart}   = useContext(GlobalContext);
             const [contador, setContador] = useState(initial);
-            const [titulo, setTitulo] = useState(nameProducto);
-            const [stockInicial, setStockInicial] = useState(stock);
+            const [stockInicial, setStockInicial] = useState(stockDelProducto);
             return(
                 
                 <div style= {{width: 150, height: 130}}>
                     
                     <div className="carrito">
                     </div>
-                    <h3>{titulo}</h3>
                     <div style= {botones}>
                     <div style = {styleBotonSumaYResta} >
                     <button className="resta btn btn-outline-secondary btn-sm" style={{height:30}} onClick={  () => contador > 0  ? setContador ( contador - 1): ""}>-</button>
@@ -46,21 +48,20 @@ const ItemCount = ({stock, initial,nameProducto,onAdd}) =>
                     </div>
                     <div style={botonAgregar}>
                     <button type="button" className="btn btn-secondary btn-sm" onClick={ onAdd = () => {
-                        
                         if ( stockInicial >= contador ){
-                            console.log(`Usted Agrego al carrito:  ${contador} ${titulo}`)
+                            console.log(`Usted Agrego al carrito:  ${contador} ${title}`)
+                            setProductCart (productCart + contador)
                             setStockInicial ( stockInicial - contador)
                                 }
-                                else {
+                                else 
+                                {
                                     (console.log ("No hay suficientes productos para la compra"))
                                 }
-                            
                         }
-
                     }>Agregar al Carrito</button>
+                    </div>
+                    </div>
                     
-                    </div>
-                    </div>
                 </div>
             )
         };

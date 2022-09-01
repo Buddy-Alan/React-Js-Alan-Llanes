@@ -14,7 +14,10 @@ const imgYContador = {
 }
 
 const ItemDetails = ({detallesProducto}) => {
+
+
     const {id,title,price,pictureURL,description,stock,category} = detallesProducto;
+
     return (
       <div className={`row  ${category}`}>
       <div className='col'style={itemDetailsClass}>
@@ -24,12 +27,11 @@ const ItemDetails = ({detallesProducto}) => {
       <div>
       <h5 className="card-title" >{title}</h5>
       <p className="card-text"> $ {price} </p>
-      <p>Stock: {stock} </p>
-      <ItemCount initial={1} stock={stock} />
+      <p>Stock: {stock}</p>
+      <ItemCount initial={1} stockDelProducto={stock} productoCompleto = {detallesProducto} />
       </div>
       </div>
       <div className="card-body" >
-
       <p>Caracteristicas del producto: </p>
         <ul>
           { 

@@ -1,10 +1,13 @@
 import React from "react";
 import Logo from '../../logo.svg';
 import CartWidget from "../CartWidget/CartWidget"; //importo el changuito
-import {NavLink} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 import navBarItems from '../../JSONS/configNavBar.json'
 
 
+const cartWidgetStyle = {
+   textDecoration: "none",
+   color: "black"}
 
 const navBar = () =>
 
@@ -35,12 +38,12 @@ const navBar = () =>
       ))
       }  
 
-
-
       </ul>
     </div>
+     { <NavLink to = "/cart" style={cartWidgetStyle}>  <CartWidget/>  </NavLink>}
+    
 
-    <CartWidget/>
+
 
     </nav>
 

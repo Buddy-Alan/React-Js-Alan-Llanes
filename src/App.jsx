@@ -1,7 +1,6 @@
 import './App.css';
-import NavBar from './Component/navBar/navBar'
-import ItemListCointainer from './Component/itemListContainer/itemListContainer';
 import Rutas from './routes/rutas';
+import GlobalProvider from './context/GlobalProvider';
 
 
 function App() {
@@ -9,7 +8,10 @@ function App() {
     return ( 
      <>
         <div className = "Navbar_menu" >
-        <Rutas/>
+            <GlobalProvider>
+            <Rutas/>
+            </GlobalProvider>
+
         </div> 
         < header className =  "" >
         </header>   
