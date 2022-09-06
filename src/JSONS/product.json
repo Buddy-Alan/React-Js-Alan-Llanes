@@ -5,11 +5,10 @@
                 "id": 1,
                 "category": 1,
                 "title": " Procesador Ryzen 5 5600 g ",
-                "price": 37.547,
+                "price": 37547,
                 "pictureURL": "./ProcesadorRyzen5.jpg",
                 "stock": 3,
                 "description": [
-
                     "Número de núcleos: 6",
                     "Número de hilos de proceso: 12",
                     "Reloj base: 3.9GHz",
@@ -33,7 +32,7 @@
                 "id": 2,
                 "category": 1,
                 "title": "Procesador Ryzen 7 5700g",
-                "price": 61.371,
+                "price": 61371,
                 "pictureURL": "./ProcesadorRyzen7.jpg",
                 "stock": 5,
                 "description": [
@@ -60,7 +59,7 @@
                 "id": 3,
                 "category": 1,
                 "title": "Memoria DDR4 3200 Mhzs 8 gb kingstong",
-                "price": 11.167,
+                "price": 11167,
                 "pictureURL": "./RamDDR4_8GB.jpg",
                 "stock": 20,
                 "description": [
@@ -76,7 +75,7 @@
                 "id": 4,
                 "category": 2,
                 "title": "Disco SSD 240GB ",
-                "price": 4.795,
+                "price": 4795,
                 "pictureURL": "./DiscoSSD240GB.jpg",
                 "stock": 10,
                 "description": [
@@ -96,7 +95,7 @@
                 "id": 5,
                 "category": 2,
                 "title": "Disco SSD 480GB ",
-                "price": 8.155,
+                "price": 8155,
                 "pictureURL": "./DiscoSSD480GB.jpg",
                 "stock": 10,
                 "description": [
@@ -111,8 +110,29 @@
                     "Velocidad Lectura: 545 MB/s",
                     "Velocidad Escritura: 545 MB/s"
                 ]
+            },
+            {
+                "id": 6,
+                "category": 1,
+                "title": "Mother Asrock A520M-AC",
+                "price": 13022,
+                "pictureURL": "./A520Mac(L1).jpg",
+                "stock": 5,
+                "description": [
+                    "Compatible con procesadores de escritorio Socket AM4 AMD Ryzen™ 2000, 3000, 4000 serie G y serie 5000*",
+                    "6 Phase Power Design",
+                    "Soporta memoria DDR4 4733+ (OC)",
+                    "1 x PCIe 3.0 x16, 1 x PCIe 3.0 x1",
+                    "Opciones de salida gráficos: HDMI",
+                    "Audio 7.1 canales HD (Códec de audio Realtek ALC887)",
+                    "4 x SATA3, 1 x Ultra M.2(Gen3 x4 & SATA3)",
+                    "6 x USB 3.2 Gen1(4 x Rear, 2 x Front)",
+                    "6 x USB 2.0(2 x Rear, 4 x Front)",
+                    "Realtek Gigabit LAN",
+                    "Dual Band 802.11ac Wi-Fi + BT 4.2 Module",
+                    "*No es compatible con AMD Ryzen™ 5 3400G y Ryzen™ 3 3200G."
+                ]
             }
-
         ]
 
     }

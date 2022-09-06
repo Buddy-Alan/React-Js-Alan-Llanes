@@ -30,8 +30,8 @@ const styleBotonSumaYResta = {
 
 const ItemCount = ({stockDelProducto, initial,productoCompleto,onAdd}) =>
         { 
-            const {title} = productoCompleto
-            const {productCart,setProductCart}   = useContext(GlobalContext);
+            const {id,title,price,pictureURL,category} = productoCompleto
+            const {cartCount,setCartCount, addCart }   = useContext(GlobalContext);
             const [contador, setContador] = useState(initial);
             const [stockInicial, setStockInicial] = useState(stockDelProducto);
             return(
@@ -49,14 +49,15 @@ const ItemCount = ({stockDelProducto, initial,productoCompleto,onAdd}) =>
                     <div style={botonAgregar}>
                     <button type="button" className="btn btn-secondary btn-sm" onClick={ onAdd = () => {
                         if ( stockInicial >= contador ){
-                            console.log(`Usted Agrego al carrito:  ${contador} ${title}`)
-                            setProductCart (productCart + contador)
+                            setCartCount (cartCount + contador)
                             setStockInicial ( stockInicial - contador)
+                            addCart ({id,title,price,pictureURL,contador})
                                 }
                                 else 
                                 {
                                     (console.log ("No hay suficientes productos para la compra"))
                                 }
+
                         }
                     }>Agregar al Carrito</button>
                     </div>
