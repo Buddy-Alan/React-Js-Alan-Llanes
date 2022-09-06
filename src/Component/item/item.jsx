@@ -6,7 +6,6 @@
  }
  
  const item = ({item}) => { 
-      console.log (item)
     const {id,title,price,pictureURL,category} = item;
    return (
       <div className={`col ${category}`}  style={styleCard}>
