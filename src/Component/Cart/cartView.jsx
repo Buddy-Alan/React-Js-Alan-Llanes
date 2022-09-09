@@ -12,10 +12,10 @@ const   styleButton = {
 
 
 
-const ProductCarrito = ({productCart}) => {
+const CartView = ({productCart}) => {
 
  const {removeItems} = useContext(GlobalContext);
-         const {id,title,price,pictureURL,category,contador} = productCart;
+         const {id,title,price,contador} = productCart;
          return (
             <tr>
             <td>{title}</td>
@@ -30,4 +30,4 @@ const ProductCarrito = ({productCart}) => {
    
 
 
-export default ProductCarrito
+export default CartView

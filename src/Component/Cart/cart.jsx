@@ -1,7 +1,7 @@
 import React, {useContext} from 'react'
 import { GlobalContext } from '../../context/GlobalProvider';
 import {Link} from 'react-router-dom';
-import ProductCarrito from './productCarrito';
+import CartView from './cartView';
 
 const   styleButton = {
   paddingY: ".25rem",
@@ -9,13 +9,6 @@ const   styleButton = {
   fontSize: ".85rem"
 }
 
-const botonFinalzarYSeguir = {
-
-  justifyContent : "flexEnd",
-  alingItems:"flexEnd",
-  justifyItems: "flexEnd",
-  alignContent: "flexEnd"
-}
 
 
 const Cart = () => {
@@ -39,7 +32,7 @@ const Cart = () => {
         <tbody>
           { 
               productInCart.map ((item,index) =>
-              <ProductCarrito key = {index} productCart={item} />
+              <CartView key = {index} productCart={item} />
               )
           }
         </tbody>
