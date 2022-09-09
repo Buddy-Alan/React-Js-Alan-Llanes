@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useContext} from "react";
+import { GlobalContext } from '../../context/GlobalProvider';
 import Logo from '../../logo.svg';
 import CartWidget from "../CartWidget/CartWidget"; //importo el changuito
-import {NavLink, Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import navBarItems from '../../JSONS/configNavBar.json'
 
 
@@ -9,16 +10,15 @@ const cartWidgetStyle = {
    textDecoration: "none",
    color: "black"}
 
-const navBar = () =>
-
+const NavBar = () =>
 {
-
+  const {contadorDeProductos} = useContext (GlobalContext)
   //Meto los items de mi navbar en un objeto.
 
     return (
         <nav className="navbar bg-light  navbar-expand-lg">
 
-    <a className="navbar-brand" href="#">
+    <a className="navbar-brand">
     <img src={Logo} alt="Logo" width="60" height="60" className="d-inline-block align-text-top"/>
     
     </a>
@@ -40,14 +40,13 @@ const navBar = () =>
 
       </ul>
     </div>
-     { <NavLink to = "/cart" style={cartWidgetStyle}>  <CartWidget/>  </NavLink>}
-    
-
-
+      {
+      contadorDeProductos !== 0 && <NavLink to = "/cart" style={cartWidgetStyle}>  <CartWidget/>  </NavLink>
+      }
 
     </nav>
 
     )
 };
 
-export default navBar;
+export default NavBar;

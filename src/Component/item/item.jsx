@@ -8,7 +8,7 @@
  const item = ({item}) => { 
     const {id,title,price,pictureURL,category} = item;
    return (
-      <div className={`col ${category}`}  style={styleCard}>
+      <div className={`col-md-4 col-xxl-3  col-sm-6 ${category}`}  style={styleCard}>
       <div className= {`card ${title}`} style={{width: "16rem"}} >
       <img className="card-img-top" src= {imagenesProductos(`${pictureURL}`)}  style={{width: "15rem"}}  alt={title}/>
       <div className="card-body" >

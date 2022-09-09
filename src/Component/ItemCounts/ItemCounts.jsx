@@ -57,7 +57,6 @@ const ItemCount = ({stockDelProducto, initial,productoCompleto,onAdd}) =>
                                 {
                                     (console.log ("No hay suficientes productos para la compra"))
                                 }
-
                         }
                     }>Agregar al Carrito</button>
                     </div>

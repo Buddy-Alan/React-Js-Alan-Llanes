@@ -10,7 +10,6 @@ const GlobalProvider = ({children}) => {
     {
       if  (productInCart.find((item) => item.id === itemID.id  ))
         {
-          console.log (productInCart)
           return (true)
         }
         else
@@ -40,6 +39,7 @@ const GlobalProvider = ({children}) => {
       return acumulador = acumulador + item.price*item.contador
   },0)
 
+  
     const resetCart = ()=> setProductInCart ([])
 
 
