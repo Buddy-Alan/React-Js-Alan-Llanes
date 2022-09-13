@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from 'react-router-dom'
-import getItems from '../../getItems'
-import product from '../../JSONS/product.json'
 import ItemDetails from "../ItemDetails/ItemDetails";
+import getItemFirestore from '../../getItemsFirestore'
 
 
 const ItemDetailCointainer = () => 
@@ -12,7 +11,7 @@ const ItemDetailCointainer = () =>
 
     const [productosNuevo, setProductosNuevo] = useState([])
 
-    getItems(useEffect,product.TodosLosProducts,setProductosNuevo)
+    setTimeout (getItemFirestore(useEffect,"products",setProductosNuevo),20000)
 
     return(
             productosNuevo.filter((item) => item.id == params.id).map((item,index) => (
