@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from "react";
 import ItemList from "../itemList/itemList";
 import getItemFirestore from '../../getItemsFirestore'
-import Home from "../Home/home"
 
 
 

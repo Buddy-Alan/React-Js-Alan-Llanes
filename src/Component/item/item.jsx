@@ -2,8 +2,17 @@
  import {Link} from 'react-router-dom';
  const imagenesProductos = require.context('../Imagenes/', true);
  const styleCard = {
-  paddingBottom: 5
+  paddingBottom: 5,
+  display: "flex",
+  alingItems:"center",
+  justifyContent: "center"
  }
+ const styleDiv = {
+   display: "flex",
+   alingItems:"center",
+   justifyContent: "center"
+}
+
  
  const item = ({item}) => { 
     const {id,title,price,pictureURL,category} = item;

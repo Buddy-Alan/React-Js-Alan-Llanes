@@ -12,7 +12,8 @@ const   styleButton = {
 
 
 const Cart = () => {
-    const {productInCart,resetCart, contadorDePrecioTotal,contadorDeProductos} = useContext(GlobalContext); 
+    const {productInCart,resetCart, contadorDePrecioTotal,contadorDeProductos} = useContext(GlobalContext);
+    console.log (productInCart)
   return (
     <div>
       {productInCart.length > 0 ?
@@ -23,6 +24,7 @@ const Cart = () => {
         <table className="table">
         <thead>
           <tr>
+            <th>Imagen</th>
             <th>Item</th>
             <th>Cantidad</th>
             <th>Acción</th>
@@ -30,7 +32,7 @@ const Cart = () => {
           </tr>
         </thead>
         <tbody>
-          { 
+          {
               productInCart.map ((item,index) =>
               <CartView key = {index} productCart={item} />
               )
@@ -38,25 +40,24 @@ const Cart = () => {
         </tbody>
         <tfoot>
         <tr>
+        <td></td>
         <th scope='col'>Total productos</th>
         <td>{contadorDeProductos}</td>
         <td><button className="btn btn-danger btn-sm" onClick={resetCart}> Vaciar Carrito</button> </td>
         <td> ${contadorDePrecioTotal}</td>
         </tr>
-
         {/* <tr>
         <td><button className="btn btn-danger btn-sm"> Finalizar Compra</button> </td>
         </tr> */}
-
         </tfoot>
       </table>
       <div className= "align-self-end" >
-      <Link to={`/`} className="btn btn-primary " style={{marginRight: 10}}> Seguir Comprando</Link> 
-      <button className="btn btn-success "> Finalizar Compra</button> 
+      <Link to={`/`} className="btn btn-primary " style={{marginRight: 10}}> Seguir Comprando</Link>
+      <button className="btn btn-success "> Finalizar Compra</button>
       </div>
       </div>
       </div>
-      
+
 
       </> :
       <>
@@ -68,8 +69,9 @@ const Cart = () => {
           </tr>
         </thead>
           </table>
-      </>  
+      </>
     }
+
     </div>
   )
 }
