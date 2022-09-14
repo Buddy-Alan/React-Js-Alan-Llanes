@@ -11,7 +11,7 @@ const ItemDetailCointainer = () =>
 
     const [productosNuevo, setProductosNuevo] = useState([])
 
-    setTimeout (getItemFirestore(useEffect,"products",setProductosNuevo),20000)
+    setTimeout(getItemFirestore(useEffect,"products",setProductosNuevo),20000)
 
     return(
             productosNuevo.filter((item) => item.id == params.id).map((item,index) => (

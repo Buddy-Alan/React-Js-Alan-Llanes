@@ -4,6 +4,7 @@ import NavBar from '../Component/navBar/navBar'
 import ItemListContainer from '../Component/itemListContainer/itemListContainer'
 import ItemDetailCointainer from '../Component/ItemDetailCointainer/ItemDetailCointainer'
 import Cart from '../Component/Cart/cart'
+import Home from "../Component/Home/home"
 
 
 const Rutas = () => {
@@ -11,7 +12,7 @@ const Rutas = () => {
     <BrowserRouter>
     <NavBar/>
         <Routes>
-                <Route path="/" element= {<ItemListContainer/>} />
+                <Route path="/" element= {<Home/>} />
                 <Route path="/componentes-de-pc" element= {<ItemListContainer categoria = {1} />} />
                 <Route path="/componentes-de-pc/:id" element= {<ItemDetailCointainer/>} /> 
                 <Route path="/almacenamiento" element= {<ItemListContainer categoria={2}/>} />

@@ -11,7 +11,7 @@
    return (
       <div className={`col-md-4 col-xxl-3  col-sm-6 ${category}`}  style={styleCard}>
       <div className= {`card ${title}`} style={{width: "16rem", height: "25rem"}} >
-      <img className="card-img-top" src= {pictureURL}  style={{width: "15rem"}}  alt={title}/> 
+      <img className="card-img-top" src= {imagenesProductos(pictureURL)}  style={{width: "15rem"}}  alt={title}/> 
       <div className="card-body" >
       <h5 className="card-title"  >{title}</h5>
       <p className="card-text"  > $ {price} </p>

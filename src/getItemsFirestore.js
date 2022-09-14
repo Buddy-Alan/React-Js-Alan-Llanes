@@ -10,7 +10,7 @@ const getItemFirestore = (effectParaObtenerItem, nombreDeLaBaseAUtilizar, stateD
                 const res = col.docs.map((doc) => doc = { id: doc.id, ...doc.data() })
                 stateDondeImpacta(res)
             } catch (error) {
-
+                console.log("Error de Carga de Datos")
             }
 
         }
