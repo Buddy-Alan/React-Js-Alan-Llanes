@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from "react";
+import React, {useContext} from "react";
 import { useParams } from 'react-router-dom'
 import ItemDetails from "../ItemDetails/ItemDetails";
-import getItemFirestore from '../../getItemsFirestore'
+import {GlobalContext} from "../../context/GlobalProvider";
 
 
 const ItemDetailCointainer = () => 
@@ -9,9 +9,7 @@ const ItemDetailCointainer = () =>
 {
     const params = useParams ();
 
-    const [productosNuevo, setProductosNuevo] = useState([])
-
-    setTimeout(getItemFirestore(useEffect,"products",setProductosNuevo),20000)
+    const {productosNuevo} = useContext(GlobalContext)
 
     return(
             productosNuevo.filter((item) => item.id == params.id).map((item,index) => (

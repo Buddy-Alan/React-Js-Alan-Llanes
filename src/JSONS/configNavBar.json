@@ -14,10 +14,6 @@
         {
             "item": "Combos",
             "to": "/combos"
-        },
-        {
-            "item": "Contactanos",
-            "to": "/contactanos"
         }
     ]
 }

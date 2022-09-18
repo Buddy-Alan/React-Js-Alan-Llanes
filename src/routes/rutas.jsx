@@ -5,6 +5,7 @@ import ItemListContainer from '../Component/itemListContainer/itemListContainer'
 import ItemDetailCointainer from '../Component/ItemDetailCointainer/ItemDetailCointainer'
 import Cart from '../Component/Cart/cart'
 import Home from "../Component/Home/home"
+import Formulario from '../Component/Form/Formulario'
 
 
 const Rutas = () => {
@@ -16,6 +17,7 @@ const Rutas = () => {
                 <Route path="/componentes-de-pc" element= {<ItemListContainer categoria = {1} />} />
                 <Route path="/componentes-de-pc/:id" element= {<ItemDetailCointainer/>} /> 
                 <Route path="/almacenamiento" element= {<ItemListContainer categoria={2}/>} />
+                <Route path="/formDeCompra" element ={<Formulario/>}/>
                 <Route path="/cart" element= {<Cart/>} />
         </Routes>
     </BrowserRouter>

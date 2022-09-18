@@ -1,10 +1,15 @@
-import React,{createContext,useState} from 'react'
+import React,{createContext,useState,useEffect} from 'react'
+import getItemFirestore from '../getItemsFirestore'
 
 export  const GlobalContext = createContext (); 
 
 const GlobalProvider = ({children}) => {
     const [cartCount, setCartCount] = useState (0);
     const [productInCart, setProductInCart] = useState ([])
+    const [productosNuevo, setProductos] = useState([])
+
+    setTimeout( getItemFirestore (useEffect,"products",setProductos),2000)
+
 
     const isInCart =  (itemID) =>
     {
@@ -55,7 +60,8 @@ const GlobalProvider = ({children}) => {
         cartCount,
         productInCart,
         contadorDeProductos,
-        contadorDePrecioTotal,        
+        contadorDePrecioTotal,
+        productosNuevo,                
         setCartCount,
         addCart,
         removeItems,

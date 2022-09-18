@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from "react";
+import React,{useContext} from "react";
 import ItemList from "../itemList/itemList";
-import getItemFirestore from '../../getItemsFirestore'
+import { GlobalContext } from "../../context/GlobalProvider";
+
 
 
 
 const ItemListContainer = ({categoria}) => {
-    const [productosNuevo, setProductos] = useState([])
-    setTimeout( getItemFirestore (useEffect,"products",setProductos),2000)
 
+    const {productosNuevo} = useContext(GlobalContext);
     return(
     <div className="row">
         <ItemList items = {productosNuevo} categoryItems = {categoria} />

@@ -2,6 +2,8 @@ import React, {useContext} from 'react'
 import { GlobalContext } from '../../context/GlobalProvider';
 import {Link} from 'react-router-dom';
 import CartView from './cartView';
+import Form from '../Form/Formulario';
+import Swal from 'sweetalert2'
 
 const   styleButton = {
   paddingY: ".25rem",
@@ -10,9 +12,28 @@ const   styleButton = {
 }
 
 
-
 const Cart = () => {
-    const {productInCart,resetCart, contadorDePrecioTotal,contadorDeProductos} = useContext(GlobalContext);
+  
+  const alertaDecompra = () => {
+    Swal.fire({
+      title: '¿Deseas Finalizar la compra?',
+        showCancelButton: true,
+        confirmButtonText: 'Si',
+        cancelButtonColor: 'red',
+        cancelButtonText: 'No'
+      }).then((result) => {
+        /* Read more about isConfirmed, isDenied below */
+        if (result.isConfirmed) {
+          Swal.fire(
+            {
+              html: ' <button>  <Link to={`/`} className="btn btn-primary " style={{marginRight: 10}}>Seguir Comprando</Link></button>'
+            }
+          )
+        } 
+      })
+
+  }
+  const {productInCart,resetCart, contadorDePrecioTotal,contadorDeProductos} = useContext(GlobalContext);
     console.log (productInCart)
   return (
     <div>
@@ -53,12 +74,11 @@ const Cart = () => {
       </table>
       <div className= "align-self-end" >
       <Link to={`/`} className="btn btn-primary " style={{marginRight: 10}}> Seguir Comprando</Link>
-      <button className="btn btn-success "> Finalizar Compra</button>
+      <Link to={`/formDeCompra`} className="btn btn-success " style={{marginRight: 10}}> Finalizar Compra</Link>
+     
       </div>
       </div>
       </div>
-
-
       </> :
       <>
       <table className="table">

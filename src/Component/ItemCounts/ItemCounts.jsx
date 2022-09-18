@@ -1,6 +1,13 @@
 import React, {useState, useContext} from "react";
 import { GlobalContext } from "../../context/GlobalProvider";
+import Swal from "sweetalert2";
 
+const alertaDeFaltanteDeProductos = ()  => {
+    Swal.fire({
+        icon: 'error',
+        title: 'No Hay Suficientes items para la compra',
+      })
+}
 
 
 const styleBotonSumaYResta = {
@@ -30,7 +37,7 @@ const styleBotonSumaYResta = {
 
 const ItemCount = ({stockDelProducto, initial,productoCompleto,onAdd}) =>
         { 
-            const {id,title,price,pictureURL,category} = productoCompleto
+            const {id,title,price,pictureURL} = productoCompleto
             const {cartCount,setCartCount, addCart }   = useContext(GlobalContext);
             const [contador, setContador] = useState(initial);
             const [stockInicial, setStockInicial] = useState(stockDelProducto);
@@ -55,7 +62,7 @@ const ItemCount = ({stockDelProducto, initial,productoCompleto,onAdd}) =>
                                 }
                                 else 
                                 {
-                                    (console.log ("No hay suficientes productos para la compra"))
+                                    alertaDeFaltanteDeProductos()
                                 }
                         }
                     }>Agregar al Carrito</button>
