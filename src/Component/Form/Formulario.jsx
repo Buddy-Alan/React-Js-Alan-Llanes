@@ -53,10 +53,9 @@ const Formulario = () => {
 
     };
 
-
   return (
-  <>
 
+  <>
     <div className='row' style={styleDivForm}>
     <h2 style ={{textAlign:"center"}}>Complete el siguiente Formulario para Finalizar</h2>
     <form className='col-6' >
@@ -85,5 +84,6 @@ const Formulario = () => {
 </>
   )
 }
+
 
 export default Formulario

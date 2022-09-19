@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import imagen1 from '../Imagenes/Componentes.jpg';
 import imagen2 from '../Imagenes/almacenamiento.jpg';
 import home from '../Imagenes/home.jpg';
 import {Link} from 'react-router-dom';
 import ItemListContainer from '../itemListContainer/itemListContainer';
-
+import { GlobalContext } from '../../context/GlobalProvider';
 
 
 const styleImagenHome = {
@@ -20,6 +20,9 @@ const styleDiv = {
     padding: 5
 }
 const Home = () => {
+  // const {ObtenerUrlDeHome, urlDeHome} = useContext(GlobalContext);
+  // ObtenerUrlDeHome()
+  // console.log ("State de: " + urlDeHome)
   return (
     <div style={{overflow: "hidden"}}>
 

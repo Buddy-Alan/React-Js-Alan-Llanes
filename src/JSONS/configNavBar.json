@@ -12,6 +12,10 @@
             "to": "/almacenamiento"
         },
         {
+            "item": "Perifericos",
+            "to": "/perifericos"
+        },
+        {
             "item": "Combos",
             "to": "/combos"
         }

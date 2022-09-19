@@ -2,7 +2,6 @@ import React, {useContext} from 'react'
 import { GlobalContext } from '../../context/GlobalProvider';
 import {Link} from 'react-router-dom';
 import CartView from './cartView';
-import Form from '../Form/Formulario';
 import Swal from 'sweetalert2'
 
 const   styleButton = {
