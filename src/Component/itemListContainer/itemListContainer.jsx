@@ -9,8 +9,10 @@ const ItemListContainer = ({categoria}) => {
 
     const {productosNuevo} = useContext(GlobalContext);
     return(
-    <div className="row">
+        <div style={{overflow: "hidden"}} >
+    <div className="row" >
         <ItemList items = {productosNuevo} categoryItems = {categoria} />
+    </div>
     </div>
     );
 
