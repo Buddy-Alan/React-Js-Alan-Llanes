@@ -24,7 +24,7 @@
       <h5 className="card-title">{title}</h5>
       <p className="card-text"> $ {price} </p>
       <div>
-      <Link to={`${id}`} className="btn btn-primary" id = {id} style={styleBoton}>Mas Info del Porducto</Link>
+      <Link to={`${id}`} className="btn btn-primary" id = {id} style={styleBoton}>Mas Info del Producto</Link>
       </div>
       </div>
       </div>
