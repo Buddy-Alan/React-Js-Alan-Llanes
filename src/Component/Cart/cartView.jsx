@@ -1,7 +1,7 @@
 import React ,{useContext} from 'react';
 import { GlobalContext } from '../../context/GlobalProvider'
 import tachoBasura from '../Imagenes/tachoBasura.png'
-const imagenesProductos = require.context('../Imagenes/', true);
+ const imagenesProductos = require.context('../Imagenes/Productos', true);
 
 
 const styleImg =
