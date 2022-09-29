@@ -3,7 +3,6 @@ import generarTickets from "../../generarTickets"
 import { GlobalContext } from '../../context/GlobalProvider';
 import {Link} from 'react-router-dom'
 import Swal from 'sweetalert2';
-import { setLogLevel } from 'firebase/app';
 
 const styleDivForm =  {
   display:"flex",
@@ -59,7 +58,7 @@ const Formulario = () => {
   <>
     <div className='row' style={styleDivForm}>
     <h2 style ={{textAlign:"center"}}>Complete el siguiente Formulario para Finalizar</h2>
-    <form className='col-6' >
+    <form className='col-10 col-md-6 ' >
   <div className="form-group" style={styleInputForm}>
     <label >Email address</label>
     <input type="text" name="email" value = {email} className="form-control" id="exampleInputEmail1"  onChange={handleChange} minLength="6"  aria-describedby="emailHelp"  placeholder="Enter email" required />
@@ -76,7 +75,7 @@ const Formulario = () => {
     <label >Telefono</label>
     <input  className="form-control"  type="tel" name="telefono" value ={telefono} onChange={handleChange}   placeholder="Telefono" maxLength="15" required/>
   </div>
-  <div className ="col-12">
+  <div className ="col-7" >
   <button type='button' className="btn btn-success" style={{margin: 10}} onClick={ () => productInCart.length > 0 ? generarTickets(formDate,productosNuevo,urlDeHome.origin): alertaDeFaltaDeItems()}>Solicitar Compra</button>
   <Link to={`/`} className="btn btn-primary " style={{marginRight: 10}}> Seguir Comprando</Link>
   </div>
