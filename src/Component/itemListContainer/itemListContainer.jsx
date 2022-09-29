@@ -1,17 +1,18 @@
-import React,{useContext} from "react";
+import React,{useContext, CSSProperties} from "react";
 import ItemList from "../itemList/itemList";
 import { GlobalContext } from "../../context/GlobalProvider";
+import Spinner from "../Spinner/Spinner";
 
 
 
 
 const ItemListContainer = ({categoria}) => {
 
-    const {productosNuevo} = useContext(GlobalContext);
+    const {productosNuevo,loading} = useContext(GlobalContext);
     return(
         <div style={{overflow: "hidden"}} >
     <div className="row" >
-        <ItemList items = {productosNuevo} categoryItems = {categoria} />
+         {loading ? <Spinner/> :<ItemList items = {productosNuevo} categoryItems = {categoria} />}
     </div>
     </div>
     );

@@ -1,4 +1,3 @@
-import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import NavBar from '../Component/navBar/navBar'
 import ItemListContainer from '../Component/itemListContainer/itemListContainer'
@@ -8,16 +7,23 @@ import Home from "../Component/Home/home"
 import Formulario from '../Component/Form/Formulario'
 
 
+
+
 const Rutas = () => {
+
   return (
     <BrowserRouter>
     <NavBar/>
-        <Routes>
+        <Routes> 
                 <Route path="/" element= {<Home/>} />
-                <Route path="/componentes-de-pc" element= {<ItemListContainer categoria = {1} />} />
+                <Route path="/componentes-de-pc" element= { <ItemListContainer categoria = {1} />} />
                 <Route path="/componentes-de-pc/:id" element= {<ItemDetailCointainer/>} /> 
                 <Route path="/almacenamiento" element= {<ItemListContainer categoria={2}/>} />
+                <Route path="/almacenamiento/:id" element= {<ItemDetailCointainer/>} /> 
                 <Route path="/perifericos" element= {<ItemListContainer categoria={3}/>} />
+                <Route path="/perifericos/:id" element= {<ItemDetailCointainer/>} /> 
+                <Route path="/combos" element= {<ItemListContainer categoria={4}/>} />
+                <Route path="/combos/:id" element= {<ItemDetailCointainer/>} />
                 <Route path="/formDeCompra" element ={<Formulario/>}/>
                 <Route path="/cart" element= {<Cart/>} />
         </Routes>

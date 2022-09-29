@@ -10,21 +10,23 @@ const GlobalProvider = ({children}) => {
     const [productInCart, setProductInCart] = useState ([])
   // Se utiliza para traer los productos de firebase
     const [productosNuevo, setProductos] = useState([])
-    
+  //Se utiliza para guardar la url del home en una variable
     const [urlDeHome, setUrlDeHome] = useState()
+  //Se utiliza para guardar el state de carga en una variable
+  const [loading, setLoading] = useState(true)
 
     //funcion que trae los datos de firebase
-    setTimeout( getItemFirestore (useEffect,"products",setProductos),2000)
+  setTimeout(getItemFirestore (useEffect,"products",setProductos,setLoading),2000)
 
+    //Se utiliza para guardar  la url del home
  const ObtenerUrlDeHome = () =>{
   useEffect(() => {
     let URLactual = window.location;
     setUrlDeHome(URLactual)
     return () => {
-      console.log (URLactual)
-      console.log (urlDeHome)
     };
   },);
+
     }
     const isInCart =  (itemID) =>
     {
@@ -43,8 +45,8 @@ const GlobalProvider = ({children}) => {
     const addCart = (product) => {
       if (isInCart(product))
           {
-            let index = productInCart.findIndex((item) => item.id === product.id)
-            setProductInCart (...productInCart[index].contador += product.contador)
+            let  index = productInCart.findIndex((item) => item.id === product.id)
+            productInCart[index].contador += product.contador
           }
         else {
           setProductInCart ([...productInCart,product])
@@ -66,9 +68,9 @@ const GlobalProvider = ({children}) => {
     const resetCart = ()=> setProductInCart ([])
 
     //Se utiliza para remover un item del carrito.
-    const removeItems =  (itemARemover) => {
+    const removeItems =  (itemARemover) => 
+    {
       setProductInCart (productInCart.filter((element)=> element.id !== itemARemover))
-
     }
 
     
@@ -80,7 +82,8 @@ const GlobalProvider = ({children}) => {
         contadorDeProductos,
         contadorDePrecioTotal,
         productosNuevo,
-        urlDeHome,                
+        urlDeHome,
+        loading,                
         setCartCount,
         addCart,
         removeItems,

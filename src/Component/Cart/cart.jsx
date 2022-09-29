@@ -13,7 +13,6 @@ const   styleButton = {
 const Cart = () => {
   
   const {productInCart,resetCart, contadorDePrecioTotal,contadorDeProductos} = useContext(GlobalContext);
-    console.log (productInCart)
   return (
     <div>
       {productInCart.length > 0 ?
@@ -46,15 +45,12 @@ const Cart = () => {
         <td><button className="btn btn-danger btn-sm" onClick={resetCart}> Vaciar Carrito</button> </td>
         <td> ${contadorDePrecioTotal}</td>
         </tr>
-        {/* <tr>
-        <td><button className="btn btn-danger btn-sm"> Finalizar Compra</button> </td>
-        </tr> */}
         </tfoot>
       </table>
-      <div className= "align-self-end" >
+      <div className= "align-self-end" style={{paddingBottom: 5}}>
       <Link to={`/`} className="btn btn-primary " style={{marginRight: 10}}> Seguir Comprando</Link>
       <Link to={`/formDeCompra`} className="btn btn-success " style={{marginRight: 10}}> Finalizar Compra</Link>
-     
+    
       </div>
       </div>
       </div>

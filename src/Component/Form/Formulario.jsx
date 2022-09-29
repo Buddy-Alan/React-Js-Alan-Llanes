@@ -3,6 +3,7 @@ import generarTickets from "../../generarTickets"
 import { GlobalContext } from '../../context/GlobalProvider';
 import {Link} from 'react-router-dom'
 import Swal from 'sweetalert2';
+import { setLogLevel } from 'firebase/app';
 
 const styleDivForm =  {
   display:"flex",
@@ -23,7 +24,7 @@ const alertaDeFaltaDeItems =  () => {
 }
 
 const Formulario = () => {
-  const {productosNuevo, contadorDePrecioTotal,productInCart} = useContext(GlobalContext)
+  const {productosNuevo, contadorDePrecioTotal,productInCart,urlDeHome} = useContext(GlobalContext)
 
     const [formDate, setFormDate] = useState (
         {
@@ -60,23 +61,23 @@ const Formulario = () => {
     <h2 style ={{textAlign:"center"}}>Complete el siguiente Formulario para Finalizar</h2>
     <form className='col-6' >
   <div className="form-group" style={styleInputForm}>
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="text" name="email" value = {email} className="form-control" id="exampleInputEmail1"  onChange={handleChange} minlength="6"  aria-describedby="emailHelp"  placeholder="Enter email" required />
+    <label >Email address</label>
+    <input type="text" name="email" value = {email} className="form-control" id="exampleInputEmail1"  onChange={handleChange} minLength="6"  aria-describedby="emailHelp"  placeholder="Enter email" required />
   </div>
   <div className="form-group" style={styleInputForm}>
-    <label for="exampleInputNombre">Nombre</label>
-    <input  className="form-control"  type="text" name="nombre" value ={nombre} onChange={handleChange} minlength="2"  placeholder="Nombre" required/>
+    <label >Nombre</label>
+    <input  className="form-control"  type="text" name="nombre" value ={nombre} onChange={handleChange} minLength="2"  placeholder="Nombre" required/>
   </div>
   <div className="form-group" style={styleInputForm}>
-    <label for="exampleInputApellido">Apellido</label>
-    <input  className="form-control"  type="text" name="apellido" value ={apellido} onChange={handleChange} minlength="2"   placeholder="Apellido" required/>
+    <label>Apellido</label>
+    <input  className="form-control"  type="text" name="apellido" value ={apellido} onChange={handleChange} minLength="2"   placeholder="Apellido" required/>
   </div>
   <div className="form-group"style={styleInputForm}>
-    <label for="exampleInputTelefono">Telefono</label>
-    <input  className="form-control"  type="tel" name="telefono" value ={telefono} onChange={handleChange}   placeholder="Telefono" max="15" required/>
+    <label >Telefono</label>
+    <input  className="form-control"  type="tel" name="telefono" value ={telefono} onChange={handleChange}   placeholder="Telefono" maxLength="15" required/>
   </div>
   <div className ="col-12">
-  <button type='button' class="btn btn-success" style={{margin: 10}} onClick={ () => productInCart.length > 0 ? generarTickets(formDate,productosNuevo): alertaDeFaltaDeItems()}>Solicitar Compra</button>
+  <button type='button' className="btn btn-success" style={{margin: 10}} onClick={ () => productInCart.length > 0 ? generarTickets(formDate,productosNuevo,urlDeHome.origin): alertaDeFaltaDeItems()}>Solicitar Compra</button>
   <Link to={`/`} className="btn btn-primary " style={{marginRight: 10}}> Seguir Comprando</Link>
   </div>
 </form>

@@ -1,14 +1,26 @@
 import React, {useContext} from "react";
 import { GlobalContext } from '../../context/GlobalProvider';
-import Logo from '../../logo.svg';
+import Logo from '../Imagenes/logo.png';
 import CartWidget from "../CartWidget/CartWidget"; //importo el changuito
 import {NavLink} from 'react-router-dom';
 import navBarItems from '../../JSONS/configNavBar.json'
 
+const  navBarstyle ={
+  backgroundSize: "cover",
+  minHeight: "10vh"
+}
+
+const ulStyle = {
+  padding: 0,
+	margin: 0,
+	width: "90%"
+}
 
 const cartWidgetStyle = {
    textDecoration: "none",
-   color: "black"}
+   color: "black",
+   width: "10%"
+}
 
 const NavBar = () =>
 {
@@ -16,7 +28,7 @@ const NavBar = () =>
   //Meto los items de mi navbar en un objeto.
 
     return (
-        <nav className="navbar bg-light  navbar-expand-lg">
+        <nav className="navbar bg-light  navbar-expand-lg" style={navBarstyle}>
 
     <a className="navbar-brand">
     <img src={Logo} alt="Logo" width="60" height="60" className="d-inline-block align-text-top"/>
@@ -27,7 +39,7 @@ const NavBar = () =>
     </button>
 
     <div className="collapse navbar-collapse " id="navbarNav">
-      <ul className="navbar-nav">
+      <ul className="navbar-nav" style={ulStyle}>
 
        {
         //Hago un map de mi array para que me devuelva todo los items.
@@ -39,10 +51,11 @@ const NavBar = () =>
       }  
 
       </ul>
-    </div>
       {
       contadorDeProductos !== 0 && <NavLink to = "/cart" style={cartWidgetStyle}>  <CartWidget/>  </NavLink>
       }
+
+    </div>
 
     </nav>
 

@@ -6,7 +6,7 @@ const alertaDeFaltanteDeProductos = ()  => {
     Swal.fire({
         icon: 'error',
         title: 'No Hay Suficientes items para la compra',
-      })
+        })
 }
 
 
@@ -38,14 +38,14 @@ const styleBotonSumaYResta = {
 const ItemCount = ({stockDelProducto, initial,productoCompleto,onAdd}) =>
         { 
             const {id,title,price,pictureURL} = productoCompleto
-            const {cartCount,setCartCount, addCart }   = useContext(GlobalContext);
+            const {cartCount,setCartCount, addCart,productInCart }   = useContext(GlobalContext);
             const [contador, setContador] = useState(initial);
             const [stockInicial, setStockInicial] = useState(stockDelProducto);
+            let stockDeCarrito = productInCart.find(item => item.id == id)
             return(
                 
                 <div style= {{width: 150, height: 130}}>
-                    
-                    <div className="carrito">
+                    <div className="carrito">  
                     </div>
                     <div style= {botones}>
                     <div style = {styleBotonSumaYResta} >
@@ -55,15 +55,29 @@ const ItemCount = ({stockDelProducto, initial,productoCompleto,onAdd}) =>
                     </div>
                     <div style={botonAgregar}>
                     <button type="button" className="btn btn-secondary btn-sm" onClick={ onAdd = () => {
-                        if ( stockInicial >= contador ){
-                            setCartCount (cartCount + contador)
-                            setStockInicial ( stockInicial - contador)
-                            addCart ({id,title,price,pictureURL,contador})
-                                }
-                                else 
-                                {
-                                    alertaDeFaltanteDeProductos()
-                                }
+                        if (stockDeCarrito == undefined){
+                            if ( stockInicial >= contador){
+                                setCartCount (cartCount + contador)
+                                addCart ({id,title,price,pictureURL,contador})
+                                    }
+                                        else 
+                                    {
+                                        alertaDeFaltanteDeProductos()
+                                    }
+                            
+                            }
+                            else
+                            {   
+                                if ( stockInicial > stockDeCarrito.contador && (stockInicial-stockDeCarrito.contador) >= contador )
+                                        {
+                                            setCartCount (cartCount + contador)
+                                            addCart ({id,title,price,pictureURL,contador})
+                                        }
+                                        else 
+                                        {
+                                            alertaDeFaltanteDeProductos()
+                                        }
+                            }
                         }
                     }>Agregar al Carrito</button>
                     </div>

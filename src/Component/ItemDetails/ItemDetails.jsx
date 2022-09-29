@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemCount from '../ItemCounts/ItemCounts'
-const imagenesProductosDetalle = require.context('../Imagenes/', true);
+const imagenesProductosDetalle = require.context('../Imagenes/Productos', true);
 const itemDetailsClass = {
   display: "flex",
   justifyContent:"center"
@@ -12,13 +12,18 @@ const imgYContador = {
   alignItems: "end"
 }
 
+const styleCard = {
+  paddingBottom: "1em",
+  paddingTop: "1em"
+}
+
 const ItemDetails = ({detallesProducto}) => {
 
 
     const {id,title,price,pictureURL,description,stock,category} = detallesProducto;
 
     return (
-      <div className={`row  ${category}`}>
+      <div className={`row  ${category}`} style = {styleCard}>
       <div className='col'style={itemDetailsClass}>
       <div className= {`card ${title}`} id= {id}  style={{width: "48rem" } } >
       <div style={imgYContador}>
