@@ -1,70 +1,80 @@
-# Getting Started with Create React App
+# Proyecto de React
+## _Ecommerce Computacion_
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El Ecommerce Computacion, es una aplicacion Web que se utiliza para simular comprar hardwares para computadoras. 
+Para realizar esta aplicacion se utilizo:
+- React.JS
+- JavaScript
+- HTML y CSS
+- Bootstrap
+- SweetAlert
+- FireBase
 
-## Available Scripts
+Se busco principalmente la comodida visual del usuario, tanto sea a la hora de seleccionar el producto, como al momento de comprar. 
 
-In the project directory, you can run:
+La apliacion cuenta con: 
+- Home.
+- Componentes de PC.
+- Almacenamiento.
+- Perifericos.
+- Combos.
+- Detalles del Producto antes de la compra
+- Carrito de Compras.
+- Form de Compras.
 
-### `npm start`
+# Home.
+Cuenta con 4 Botones que hacen que el usuario pueda navegar por toda la apliacion. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Componentes de PC.
+El objetivo de este es ver solo la parte del hardware relacionada a procesadores, mother, ram entre otras
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Almacenamiento.
+ El objetivo es que el cliente solo pueda acceder a la parte de alacenamientos como discos Rigidos, Solidos, Pendrive etc.
 
-### `npm test`
+# Perifericos
+Aca solo se puede acceder a la parte de perifericos, como teclados, mouse,auriculares etc.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Combos
+El objetivo es que se puedan ver combos de actualizacion para computadoras.
 
-### `npm run build`
+# Detalles del Producto antes de la compra
+En este apartado, se pueden ver los detalles del producto, aca se puede observar que stock hay, posee un contador para seleccionar la cantidad de produtos a adquirir, y se puede leer la caracteristica del articulo antes de la compra final. Los productos  Tienen una limitacion de  stock, por lo tanto si el cliente quiere agregar mas productos de los que hay en stock  le va a salir un cartel  advirtiendo que no hay mas stock del producto a agregar.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Carrito de Compras.
+El carrito solo aparece cuando hay productos, y se puede acceder dandole click en el mismo, este esta hecho con tablas y se pueden ver los productos agregados, el precio total y el precio por grupo de productos.
+Tambien cuenta con botones para eliminar productos, o para vaciar por completo el carrito.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Form de Compras
+El form de compras se puede acceder cuando ingresan al carrito, aparece un boton que dice "finalizar compra", que te re dirige a un fomulario.  El objetivo es que el cliente complete sus datos para despues poder ponernos en contacto con el.
+El form de compras tiene filtros, con el fin de que el cliente complete el formulario si o si. A su vez tambien tiene un filtro por si el cliente pudo acceder igual al  carrito y no posee ningun articulo.
 
-### `npm run eject`
+## Otras cosas  a Aclarar: 
+- La parte de los productos se separo por una categoria que se les asigno en la Base de datos, luego en el codigo se hace un filtro por categoria y se logra mostrar los articulos  de acuerdo a la pagin en la que este el cliente.
+- El stock de la base se actualiza de acurdo a la peticion del cliente.
+- En el repositorio se encuentra una carpeta con gif, que muestra el funcionamiento de la aplicacion, muestras sus filtros, y como se accede a cada parte de la misma. 
+ 
+Los Gif se ordenan de la siguiente manera: 
+1) Menu.gif
+2) Compra.gif
+3) Actualiza-Stock.gif
+4) Respeta-Stock.gif
+5) Formulario-Incompleto.gif
+6) Form-Vacio.gif
+7) Vaciar-Carrito.gif
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Links
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Sitio | Link |
+| ------ | ------ |
+| GitHub | https://github.com/Buddy-Alan/React-Js-Alan-Llanes |
+| GitHub GIF | https://github.com/Buddy-Alan/React-Js-Alan-Llanes/tree/main/GifDeFuncionamiento|
+| Vercel | https://ecommerce-computacion.vercel.app/ |
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Developer
+Llanes Alan Jesus.
+GitHub: https://github.com/Buddy-Alan
+Terminado de desarrollar el: 29/09/2022
