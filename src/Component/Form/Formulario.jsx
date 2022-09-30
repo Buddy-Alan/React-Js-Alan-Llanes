@@ -18,7 +18,7 @@ const alertaDeFaltaDeItems =  () => {
       icon: 'error',
       title: 'No Agrego ningun item al carrito',
       text: 'Por favor, agregue algun item antes de enviar el formulario'
-       })
+      })
   
 }
 
@@ -53,6 +53,7 @@ const Formulario = () => {
 
     };
 
+
   return (
 
   <>
@@ -61,7 +62,7 @@ const Formulario = () => {
     <form className='col-10 col-md-6 ' >
   <div className="form-group" style={styleInputForm}>
     <label >Email address</label>
-    <input type="text" name="email" value = {email} className="form-control" id="exampleInputEmail1"  onChange={handleChange} minLength="6"  aria-describedby="emailHelp"  placeholder="Enter email" required />
+    <input type="email" name="email" value = {email} className="form-control" id="exampleInputEmail1"  onChange={handleChange} minLength="6"  aria-describedby="emailHelp"  placeholder="Enter email" required />
   </div>
   <div className="form-group" style={styleInputForm}>
     <label >Nombre</label>
@@ -73,7 +74,7 @@ const Formulario = () => {
   </div>
   <div className="form-group"style={styleInputForm}>
     <label >Telefono</label>
-    <input  className="form-control"  type="tel" name="telefono" value ={telefono} onChange={handleChange}   placeholder="Telefono" maxLength="15" required/>
+    <input  className="form-control"  type="tel"  name="telefono" value ={telefono} onChange={handleChange}   placeholder="Telefono" maxLength="15" required/>
   </div>
   <div className ="col-7" >
   <button type='button' className="btn btn-success" style={{margin: 10}} onClick={ () => productInCart.length > 0 ? generarTickets(formDate,productosNuevo,urlDeHome.origin): alertaDeFaltaDeItems()}>Solicitar Compra</button>
