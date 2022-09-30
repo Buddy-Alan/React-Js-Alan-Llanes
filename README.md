@@ -46,7 +46,7 @@ Tambien cuenta con botones para eliminar productos, o para vaciar por completo e
 
 
 # Form de Compras
-El form de compras se puede acceder cuando ingresan al carrito, aparece un boton que dice "finalizar compra", que te re dirige a un fomulario.  El objetivo es que el cliente complete sus datos para despues poder ponernos en contacto con el.
+El form de compras se puede acceder cuando ingresan al carrito, aparece un boton que dice "finalizar compra", que te re dirige a un fomulario.  El objetivo es que el cliente complete sus datos para despues poder ponernos en contacto con el. Una vez finalizada la compra, vuelve al cliente al home
 El form de compras tiene filtros, con el fin de que el cliente complete el formulario si o si. A su vez tambien tiene un filtro por si el cliente pudo acceder igual al  carrito y no posee ningun articulo.
 
 ## Otras cosas  a Aclarar: 
