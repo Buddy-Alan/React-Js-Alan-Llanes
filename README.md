@@ -10,7 +10,7 @@ Para realizar esta aplicacion se utilizo:
 - SweetAlert
 - FireBase
 
-Se busco principalmente la comodida visual del usuario, tanto sea a la hora de seleccionar el producto, como al momento de comprar. 
+Se busco principalmente la comodidad visual del usuario, tanto sea a la hora de seleccionar el producto, como al momento de comprar. 
 
 La apliacion cuenta con: 
 - Home.
