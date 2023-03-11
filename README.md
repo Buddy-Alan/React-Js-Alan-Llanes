@@ -12,7 +12,7 @@ Para realizar esta aplicacion se utilizo:
 
 Se busco principalmente la comodidad visual del usuario, tanto sea a la hora de seleccionar el producto, como al momento de comprar. 
 
-La apliacion cuenta con: 
+La aplicacion cuenta con: 
 - Home.
 - Componentes de PC.
 - Almacenamiento.
@@ -23,13 +23,13 @@ La apliacion cuenta con:
 - Form de Compras.
 
 # Home.
-Cuenta con 4 Botones que hacen que el usuario pueda navegar por toda la apliacion. 
+Cuenta con 4 Botones para que el usuario pueda navegar por toda la aplicacion. 
 
 # Componentes de PC.
 El objetivo de este es ver solo la parte del hardware relacionada a procesadores, mother, ram entre otras
 
 # Almacenamiento.
- El objetivo es que el cliente solo pueda acceder a la parte de alacenamientos como discos Rigidos, Solidos, Pendrive etc.
+ El objetivo es que el cliente solo pueda acceder a la parte de almacenamiento como discos Rigidos, Solidos, Pendrive etc.
 
 # Perifericos
 Aca solo se puede acceder a la parte de perifericos, como teclados, mouse,auriculares etc.
@@ -38,7 +38,7 @@ Aca solo se puede acceder a la parte de perifericos, como teclados, mouse,auricu
 El objetivo es que se puedan ver combos de actualizacion para computadoras.
 
 # Detalles del Producto antes de la compra
-En este apartado, se pueden ver los detalles del producto, aca se puede observar que stock hay, posee un contador para seleccionar la cantidad de produtos a adquirir, y se puede leer la caracteristica del articulo antes de la compra final. Los productos  Tienen una limitacion de  stock, por lo tanto si el cliente quiere agregar mas productos de los que hay en stock  le va a salir un cartel  advirtiendo que no hay mas stock del producto a agregar.
+En este apartado, se pueden ver los detalles del producto, aca se puede observar que stock hay, posee un contador para seleccionar la cantidad de produtos a adquirir, y se puede leer la caracteristica del articulo antes de la compra final. Los productos  Tienen una limitacion de  stock, por lo tanto si el cliente quiere agregar mas productos de los que hay en stock le va a salir un cartel  advirtiendo que no hay mas stock del producto a agregar.
 
 # Carrito de Compras.
 El carrito solo aparece cuando hay productos, y se puede acceder dandole click en el mismo, este esta hecho con tablas y se pueden ver los productos agregados, el precio total y el precio por grupo de productos.
@@ -50,8 +50,8 @@ El form de compras se puede acceder cuando ingresan al carrito, aparece un boton
 El form de compras tiene filtros, con el fin de que el cliente complete el formulario si o si. A su vez tambien tiene un filtro por si el cliente pudo acceder igual al  carrito y no posee ningun articulo.
 
 ## Otras cosas  a Aclarar: 
-- La parte de los productos se separo por una categoria que se les asigno en la Base de datos, luego en el codigo se hace un filtro por categoria y se logra mostrar los articulos  de acuerdo a la pagin en la que este el cliente.
-- El stock de la base se actualiza de acurdo a la peticion del cliente.
+- La parte de los productos se separo por una categoria que se les asigno en la Base de datos, luego en el codigo se hace un filtro por categoria y se logra mostrar los articulos de acuerdo a la pagina en la que este el cliente.
+- El stock de la base se actualiza de acuerdo a la peticion del cliente.
 - En el repositorio se encuentra una carpeta con gif, que muestra el funcionamiento de la aplicacion, muestras sus filtros, y como se accede a cada parte de la misma. 
  
 Los Gif se ordenan de la siguiente manera: 
